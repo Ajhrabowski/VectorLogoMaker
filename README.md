@@ -1,1 +1,1 @@
-# snglogo
+# svglogo
