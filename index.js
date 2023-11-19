@@ -1,9 +1,9 @@
 const inquirer = require("inquirer");
+const path = require("path");
 const fs = require("fs");
-const generateSvgFile = require("./examples")
+const generateSvg = require("./examples/generateSvg")
 
-inquirer
-  .prompt([
+const questions = [
 
     {
         type: 'input',
@@ -13,7 +13,7 @@ inquirer
     },
     {
         type: 'input',
-        name: 'color',
+        name: 'textColor',
         message: 'What is the color of your text?',
         
     },
@@ -26,22 +26,13 @@ inquirer
     },
     {
         type: 'input',
-        name: 'color',
+        name: 'shapeColor',
         message: 'What is the color of your shape?',
         
     },
-])
+];
 
 // Function to write svg file
-// function writeSvgFile(fileName, svgContent) {
-//     fs.writeFile(fileName, svgContent, (err) => {
-//       if (err) {
-//         console.error(err);
-//         return;
-//       }
-//       console.log(`SVG file ${fileName} has been created.`);
-//     });
-//   }
 
 function writeToFile(fileName, data) {
     
@@ -51,12 +42,12 @@ function writeToFile(fileName, data) {
 
   // Function call to initialize svg file
 
-  function init() {
-    inquirer.prompt(questions)
+   function init() {
+     inquirer.prompt(questions)
         .then(answers => {
             console.log("Data: ", answers)
 
-            let svgFile = generateSvgFile(answers);
+            let svgFile = generateSvg(answers);
             console.log("Svg Created: ", svgFile)
         })
         .catch(error => {
@@ -64,12 +55,12 @@ function writeToFile(fileName, data) {
         })
   } 
   
-  // Function call to initialize svg file
+//   Function call to initialize svg file
 
   function init() {
     inquirer.prompt(questions).then((answers) => {
-      
-        writeSvgFile("../examples/svgFile", generateSvgFile({ ...answers }));
+     console.log(answers) 
+        writeToFile("./examples/svgFile.svg", generateSvg({ ...answers }));
     });
   }
 
