@@ -21,8 +21,6 @@ Read more about MIT here:
 
 This is a project assignment for our MSU Fullstack Web Development Bootcamp. My task was to build a command-line application that takes in user input to generate a logo and save it as an SVG file. The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a .svg file.
 
-![Demo](./examples/)
-
 ## Installation
 
 Required applications:
@@ -37,9 +35,7 @@ To use, first download the above required applications in [Installation](#instal
 - After cloning the repository, open the directory using Visual Studio Code. 
 
 
-## Contributors:
-- Homework code source and instruction: https://git.bootcampcontent.com/Michigan-State-University/MSU-VIRT-FSF-PT-07-2023-U-LOLC
+## Contact Info: 
 
-Contact Info:     
 - [Anthony Hrabowski](https://github.com/Ajhrabowski)
 

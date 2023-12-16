@@ -7,19 +7,20 @@ function generateSvg(data) {
   let logoShape = '';
   switch (data.shape) {
     case 'Circle':
-      logoShape = renderCircle(data.text,data.shapeColor);
+      logoShape = new renderCircle(data.text, data.textColor, data.shapeColor);
       break;
 
-    case 'Triangle':
-      logoShape = renderTriangle(data.text,data.shapeColor);
+    
+      case 'Triangle':
+      logoShape = new renderTriangle(data.text, data.textColor, data.shapeColor);
       break;
 
     case 'Square':
-      logoShape = renderSquare(data.text,data.shapeColor);
+      logoShape = new renderSquare(data.text, data.textColor, data.shapeColor);
       break;
 
   }
-  return logoShape
+  return logoShape.render()
 }
 
 
